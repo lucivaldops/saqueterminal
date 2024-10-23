@@ -1,0 +1,24 @@
+public class BancoTerminal {
+    public static void main(String[] args) {
+        // Primeira operação
+        double saldo = 25.0;
+        double valorSolicitado = 18.0;
+
+        realizarSaque(saldo, valorSolicitado);
+
+        // Segunda operação
+        saldo = 15.0;
+        valorSolicitado = 22.0;
+
+        realizarSaque(saldo, valorSolicitado);
+    }
+
+    public static void realizarSaque(double saldo, double valorSolicitado) {
+        if (saldo > valorSolicitado) {
+            saldo -= valorSolicitado; // Atualiza o saldo
+            System.out.println("Saque realizado com sucesso. Novo saldo: " + saldo);
+        } else {
+            System.out.println("Saldo insuficiente");
+        }
+    }
+}
